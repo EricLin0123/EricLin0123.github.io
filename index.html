@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="user.png">
+    <title>Lin Wan Chuan</title>
+    <style>
+        a:link {
+          color: green;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:visited {
+          color: purple;
+          background-color: transparent;
+          text-decoration: none;
+        }
+        
+        a:hover {
+          color: red;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        
+        a:active {
+          color: firebrick;
+          background-color: transparent;
+          text-decoration: underline;
+        }
+        body {background-color: blanchedalmond;}
+        </style>
+</head>
+<body>
+
+<h4>Background music: Maria Becerra - High</h4>
+<audio controls autoplay loop>
+<source src="Maria Becerra - High (Video Oficial).mp3" type="audio/mpeg">
+</audio>
+
+<h1 style="color:DodgerBlue;">林萬荃自我介紹網站</h1>
+<h1> Current time is <span id="month"></span>-<span id="day"></span>-<span id="year"></span> <span id="hour"></span>:<span id="minute"></span>:<span id="second"></span></h1>
+
+
+<img src="IMG20220207130349.jpg" alt="My profile" style="width:400px;height:300px">
+<h2>學經歷</h2>
+<p style="font-size:30px;">
+    畢業於師大附中
+    <br><a href="https://www.hs.ntnu.edu.tw/">Go to HSNU website</a>
+    <br>現在就讀台大電機系
+    <br><a href="https://web.ee.ntu.edu.tw/">Go to NTUEE website</a>
+</p>
+
+<h2 style="font-size: 35px;">Hobbies:</h2>
+<blockquote>
+    <h3 style="font-size:28px;">我超愛打排球
+        <a href="https://en.volleyballworld.com/volleyball/competitions/vnl-2022/">VNL website</a>
+        <br><img src="volleyball.gif" alt="spongebob warm up" style="width:390px;height:213px">
+    <br>我會彈手風琴
+        <a href="https://www.facebook.com/accordion.feiyann">飛燕手風琴臉書</a>
+        <br><img src="accordion.gif" alt="accordion" style="width:450px;height:450px;">
+    <br>Osu mania 超好玩
+        <a href="https://osu.ppy.sh/home">Osu website</a>
+        <br><img src="osu-osu-mania.gif" alt="osu mania" style="width:498px;height:280px;">
+    </h3>
+</blockquote>
+
+
+
+
+
+<script>
+    (function loop() {
+    setTimeout(
+        function () {
+        var month = new Date().getMonth();
+        var day = new Date().getDate();
+        var year = new Date().getFullYear();
+        var hour = new Date().getHours();
+        var minute = new Date().getMinutes();
+        var second = new Date().getSeconds();
+        document.getElementById("month").textContent = month;
+        document.getElementById("day").textContent = day;
+        document.getElementById("year").textContent = year;
+     
+        document.getElementById("hour").textContent = hour;
+        if(minute < 10){
+            document.getElementById("minute").textContent = "0"+ minute;}
+        else{document.getElementById("minute").textContent = minute;}
+        if(second < 10){
+            document.getElementById("second").textContent = "0"+ second;}
+        else{document.getElementById("second").textContent = second;}
+
+        loop()
+            }, 1000); //1000 = 1000ms = 1s
+        }()); 
+    </script> 
+</body>
+</html>
